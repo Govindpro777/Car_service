@@ -21,9 +21,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-2 rounded-lg">
+            {/* <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-2 rounded-lg">
               <Car className="h-8 w-8 text-white" />
-            </div>
+            </div> */}
             <span className="text-xl font-bold text-gray-900">
               Elite Auto Detailing
             </span>
@@ -45,7 +45,7 @@ const Navbar = () => {
             </Link>
 
             {/* Services Dropdown */}
-            {/* <div className="relative">
+            <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
                 className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
@@ -53,7 +53,7 @@ const Navbar = () => {
                 Services
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              
+
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-100">
                   {services.map((service) => (
@@ -68,7 +68,7 @@ const Navbar = () => {
                   ))}
                 </div>
               )}
-            </div> */}
+            </div>
 
             <Link
               href="/contact"

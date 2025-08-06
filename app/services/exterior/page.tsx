@@ -1,178 +1,529 @@
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Link from 'next/link';
-import { Check, ArrowRight } from 'lucide-react';
+// import Navbar from '@/components/Navbar';
+// import Footer from '@/components/Footer';
+// import Link from 'next/link';
+// import { Check, ArrowRight } from 'lucide-react';
 
-export default function ExteriorDetailing() {
+// export default function ExteriorDetailing() {
+//   const services = [
+//     "Hand wash with premium soaps",
+//     "Clay bar treatment for smooth finish",
+//     "Paint correction and polishing",
+//     "Ceramic coating application",
+//     "Wheel and tire deep cleaning",
+//     "Chrome and trim restoration",
+//     "Headlight restoration",
+//     "Engine bay cleaning"
+//   ];
+
+//   const packages = [
+//     {
+//       name: "Basic Exterior",
+//       price: "$79",
+//       services: ["Hand wash", "Wheel cleaning", "Tire shine", "Window cleaning"]
+//     },
+//     {
+//       name: "Premium Exterior",
+//       price: "$139",
+//       services: ["Everything in Basic", "Clay bar treatment", "Paint polish", "Trim restoration"]
+//     },
+//     {
+//       name: "Luxury Exterior",
+//       price: "$199",
+//       services: ["Everything in Premium", "Paint correction", "Ceramic coating", "Engine bay detail"]
+//     }
+//   ];
+
+//   return (
+//     <>
+//       <Navbar />
+//       <main>
+//         {/* Hero Section */}
+//         <section className="relative min-h-[70vh] bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 flex items-center">
+//           <div className="absolute inset-0 opacity-10">
+//             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-y-12"></div>
+//           </div>
+
+//           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+//             <div className="grid lg:grid-cols-2 gap-12 items-center">
+//               <div className="text-white">
+//                 <div className="mb-4">
+//                   <span className="text-orange-400">Services</span>
+//                   <span className="mx-2">|</span>
+//                   <span>Exterior Detailing</span>
+//                 </div>
+//                 <h1 className="text-5xl font-bold mb-6">Exterior Car Detailing</h1>
+//                 <p className="text-xl text-blue-100 mb-8">
+//                   Restore your vehicle's exterior to showroom condition with our comprehensive
+//                   paint correction, protection, and detailing services.
+//                 </p>
+//                 <Link
+//                   href="/contact"
+//                   className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300"
+//                 >
+//                   Book Now
+//                   <ArrowRight className="ml-2 h-5 w-5" />
+//                 </Link>
+//               </div>
+
+//               <div className="relative">
+//                 <img
+//                   src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+//                   alt="Exterior car detailing"
+//                   className="w-full h-96 object-cover rounded-2xl shadow-2xl"
+//                 />
+//               </div>
+//             </div>
+//           </div>
+//         </section>
+
+//         {/* Services Section */}
+//         <section className="py-20 bg-white">
+//           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//             <div className="text-center mb-16">
+//               <h2 className="text-4xl font-bold text-gray-900 mb-6">What's Included</h2>
+//               <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+//                 Our exterior detailing service covers every aspect of your car's exterior to ensure
+//                 a brilliant shine and long-lasting protection.
+//               </p>
+//             </div>
+
+//             <div className="grid md:grid-cols-2 gap-8 mb-16">
+//               <div>
+//                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Service Details</h3>
+//                 <div className="space-y-4">
+//                   {services.map((service, index) => (
+//                     <div key={index} className="flex items-start space-x-3">
+//                       <div className="bg-green-100 p-1 rounded-full mt-1">
+//                         <Check className="h-4 w-4 text-green-600" />
+//                       </div>
+//                       <span className="text-gray-700">{service}</span>
+//                     </div>
+//                   ))}
+//                 </div>
+//               </div>
+
+//               <div>
+//                 <img
+//                   src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+//                   alt="Exterior cleaning process"
+//                   className="w-full h-64 object-cover rounded-lg shadow-lg"
+//                 />
+//               </div>
+//             </div>
+
+//             {/* Packages */}
+//             <div className="text-center mb-12">
+//               <h3 className="text-3xl font-bold text-gray-900 mb-6">Service Packages</h3>
+//             </div>
+
+//             <div className="grid md:grid-cols-3 gap-8">
+//               {packages.map((pkg, index) => (
+//                 <div key={index} className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-blue-500 transition-colors">
+//                   <h4 className="text-xl font-bold text-gray-900 mb-2">{pkg.name}</h4>
+//                   <div className="text-3xl font-bold text-blue-600 mb-6">{pkg.price}</div>
+//                   <ul className="space-y-3">
+//                     {pkg.services.map((service, serviceIndex) => (
+//                       <li key={serviceIndex} className="flex items-center space-x-2">
+//                         <Check className="h-4 w-4 text-green-600" />
+//                         <span className="text-gray-700">{service}</span>
+//                       </li>
+//                     ))}
+//                   </ul>
+//                   <Link
+//                     href="/contact"
+//                     className="block w-full mt-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-blue-800 transition-all duration-300"
+//                   >
+//                     Choose Package
+//                   </Link>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         </section>
+
+//         {/* Before/After Section */}
+//         <section className="py-20 bg-gray-50">
+//           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//             <div className="text-center mb-16">
+//               <h2 className="text-4xl font-bold text-gray-900 mb-6">Before & After</h2>
+//               <p className="text-gray-600 text-lg">See the incredible transformation our exterior detailing provides</p>
+//             </div>
+
+//             <div className="grid md:grid-cols-2 gap-12">
+//               <div className="text-center">
+//                 <img
+//                   src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+//                   alt="Before exterior detailing"
+//                   className="w-full h-64 object-cover rounded-lg shadow-lg mb-4"
+//                 />
+//                 <h3 className="text-xl font-bold text-gray-900">Before</h3>
+//                 <p className="text-gray-600">Dull and dirty exterior</p>
+//               </div>
+
+//               <div className="text-center">
+//                 <img
+//                   src="https://images.unsplash.com/photo-1619405399517-d7fce0f13302?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+//                   alt="After exterior detailing"
+//                   className="w-full h-64 object-cover rounded-lg shadow-lg mb-4"
+//                 />
+//                 <h3 className="text-xl font-bold text-gray-900">After</h3>
+//                 <p className="text-gray-600">Brilliant shine and protection</p>
+//               </div>
+//             </div>
+//           </div>
+//         </section>
+//       </main>
+//       <Footer />
+//     </>
+//   );
+// }
+
+"use client";
+
+import { useState } from "react";
+import { Check } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+export default function ExteriorDetailingPage() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    vehicleYear: "",
+    vehicleMake: "",
+    vehicleModel: "",
+    package: "",
+    reason: "",
+  });
+
+  const handleInputChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    alert("Information sent successfully!");
+  };
+
   const services = [
-    "Hand wash with premium soaps",
-    "Clay bar treatment for smooth finish",
-    "Paint correction and polishing",
-    "Ceramic coating application",
-    "Wheel and tire deep cleaning",
-    "Chrome and trim restoration",
-    "Headlight restoration",
-    "Engine bay cleaning"
+    "Exterior Wash",
+    "Full Service Wash",
+    "Carpet Shampoo",
+    "Interior Super Clean",
+    "Bumper To Bumper",
   ];
 
   const packages = [
-    {
-      name: "Basic Exterior",
-      price: "$79",
-      services: ["Hand wash", "Wheel cleaning", "Tire shine", "Window cleaning"]
-    },
-    {
-      name: "Premium Exterior",
-      price: "$139",
-      services: ["Everything in Basic", "Clay bar treatment", "Paint polish", "Trim restoration"]
-    },
-    {
-      name: "Luxury Exterior",
-      price: "$199",
-      services: ["Everything in Premium", "Paint correction", "Ceramic coating", "Engine bay detail"]
-    }
+    "Ultimate",
+    "Deluxe",
+    "Express",
+    "Interior Ultimate",
+    "Interior Deluxe",
+    "Engine Bay",
+    "Paint Decontamination",
   ];
+
+  const handlePackageChange = (pkg: any, checked: any) => {
+    if (checked) {
+      setFormData((prev) => ({
+        ...prev,
+        package: prev.package ? `${prev.package}, ${pkg}` : pkg,
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        package: prev.package
+          .split(", ")
+          .filter((p) => p !== pkg)
+          .join(", "),
+      }));
+    }
+  };
 
   return (
     <>
       <Navbar />
-      <main>
-        {/* Hero Section */}
-        <section className="relative min-h-[70vh] bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 flex items-center">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-y-12"></div>
-          </div>
-          
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="text-white">
-                <div className="mb-4">
-                  <span className="text-orange-400">Services</span>
-                  <span className="mx-2">|</span>
-                  <span>Exterior Detailing</span>
-                </div>
-                <h1 className="text-5xl font-bold mb-6">Exterior Car Detailing</h1>
-                <p className="text-xl text-blue-100 mb-8">
-                  Restore your vehicle's exterior to showroom condition with our comprehensive 
-                  paint correction, protection, and detailing services.
-                </p>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300"
-                >
-                  Book Now
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
+        {/* Header */}
+        <header className="py-8">
+          <div className="max-w-7xl mx-auto px-4">
+            <nav className="flex items-center justify-center">
+              <div className="text-white text-sm">
+                <span>Home</span>
+                <span className="mx-2">|</span>
+                <span>Car Detailing</span>
               </div>
-              
-              <div className="relative">
+            </nav>
+          </div>
+        </header>
+
+        {/* Main Content */}
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <div className="grid lg:grid-cols-4 gap-8">
+            {/* Left Column - Main Content */}
+            <div className="lg:col-span-3">
+              {/* Title */}
+              <h1 className="text-4xl lg:text-5xl font-bold text-white text-center mb-8">
+                EXTERIOR CAR DETAILING
+              </h1>
+
+              {/* Hero Image and Description */}
+              <div className="bg-gray-900/50 rounded-lg overflow-hidden mb-8">
                 <img
-                  src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Exterior car detailing"
-                  className="w-full h-96 object-cover rounded-2xl shadow-2xl"
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Car wash exterior detailing service"
+                  className="w-full h-80 object-cover"
                 />
+
+                <div className="p-6">
+                  <h2 className="text-2xl font-bold text-white mb-4">
+                    Ultimate Car Detailing Experience
+                  </h2>
+                  <p className="text-gray-300 leading-relaxed">
+                    At A & B Detailing, we are passionate about restoring the
+                    beauty and enhancing the overall appearance of your vehicle.
+                    Our professional car detailing services go beyond a regular
+                    car wash, providing a comprehensive and meticulous cleaning
+                    and restoration experience for your vehicle's interior and
+                    exterior.
+                  </p>
+                </div>
+              </div>
+
+              {/* Service Details */}
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                {/* Express Package */}
+                <div className="bg-gray-900/50 rounded-lg overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Express exterior detailing service"
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-4">
+                    <h3 className="text-xl font-bold text-white mb-3">
+                      Express
+                    </h3>
+                    <p className="text-gray-300 text-sm mb-4">
+                      Pre-soap wash and rinse, hand wash with ph-neutral soap,
+                      hand polish for a shiny and protected finish, rim detail
+                      with protective coating for tires up to four weeks!
+                    </p>
+                    <button className="text-orange-400 text-sm font-semibold border-b border-orange-400 hover:text-orange-300 transition-colors">
+                      SEE DETAIL
+                    </button>
+                  </div>
+                </div>
+
+                {/* Ultimate Package */}
+                <div className="bg-gray-900/50 rounded-lg overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Ultimate exterior detailing service"
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-4">
+                    <h3 className="text-xl font-bold text-white mb-3">
+                      Ultimate
+                    </h3>
+                    <p className="text-gray-300 text-sm mb-4">
+                      Complete exterior restoration including clay bar
+                      treatment, paint correction, ceramic coating application,
+                      chrome polishing, and long-lasting protection for all
+                      exterior surfaces.
+                    </p>
+                    <button className="text-orange-400 text-sm font-semibold border-b border-orange-400 hover:text-orange-300 transition-colors">
+                      SEE DETAIL
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Services */}
+            <div className="lg:col-span-1 mt-20">
+              {/* Our Services */}
+              <div className="bg-gray-900/70 rounded-lg p-6">
+                <h3 className="text-orange-400 text-xl font-bold mb-6">
+                  Our Services
+                </h3>
+                <ul className="space-y-3">
+                  {services.map((service, index) => (
+                    <li key={index} className="flex items-center text-white">
+                      <Check className="h-4 w-4 text-green-400 mr-3 flex-shrink-0" />
+                      <span className="text-sm">{service}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
-        </section>
 
-        {/* Services Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">What's Included</h2>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Our exterior detailing service covers every aspect of your car's exterior to ensure 
-                a brilliant shine and long-lasting protection.
-              </p>
+          {/* See Our Extras Button */}
+          <div className="mt-12">
+            <div className="bg-blue-800/30 py-4 text-center">
+              <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded font-semibold transition-colors">
+                SEE OUR EXTRAS
+              </button>
             </div>
+          </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Service Details</h3>
-                <div className="space-y-4">
-                  {services.map((service, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <div className="bg-green-100 p-1 rounded-full mt-1">
-                        <Check className="h-4 w-4 text-green-600" />
-                      </div>
-                      <span className="text-gray-700">{service}</span>
-                    </div>
+          {/* Quote Form */}
+          <div className="mt-8 max-w-4xl mx-auto">
+            <div className="bg-gray-100 rounded-lg p-8">
+              <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">
+                Get a Quote
+              </h3>
+              <p className="text-gray-600 mb-8 text-center">
+                We are looking forward to hearing from you!
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-gray-700 text-sm font-medium mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    name="fullName"
+                    placeholder="Enter Your Name Here"
+                    value={formData.fullName}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-gray-700 text-sm font-medium mb-2">
+                    Phone *
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-gray-700 text-sm font-medium mb-2">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-gray-700 text-sm font-medium mb-2">
+                    Vehicle Year *
+                  </label>
+                  <input
+                    type="text"
+                    name="vehicleYear"
+                    placeholder="Enter Vehicle Year"
+                    value={formData.vehicleYear}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-gray-700 text-sm font-medium mb-2">
+                    Vehicle Make *
+                  </label>
+                  <input
+                    type="text"
+                    name="vehicleMake"
+                    placeholder="i.e Toyota"
+                    value={formData.vehicleMake}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-gray-700 text-sm font-medium mb-2">
+                    Vehicle Model *
+                  </label>
+                  <input
+                    type="text"
+                    name="vehicleModel"
+                    placeholder="i.e Prius V"
+                    value={formData.vehicleModel}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <label className="block text-gray-700 text-sm font-medium mb-2">
+                  Package *
+                </label>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  {packages.map((pkg) => (
+                    <label key={pkg} className="flex items-center">
+                      <input
+                        type="checkbox"
+                        name="package"
+                        value={pkg}
+                        onChange={(e) =>
+                          handlePackageChange(pkg, e.target.checked)
+                        }
+                        className="mr-2"
+                      />
+                      <span className="text-gray-700 text-sm">{pkg}</span>
+                    </label>
                   ))}
                 </div>
               </div>
-              
-              <div>
-                <img
-                  src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                  alt="Exterior cleaning process"
-                  className="w-full h-64 object-cover rounded-lg shadow-lg"
+
+              <div className="mt-6">
+                <label className="block text-gray-700 text-sm font-medium mb-2">
+                  Reason For Contact *
+                </label>
+                <textarea
+                  name="reason"
+                  placeholder="Ask For Details or For Any Question / Quote"
+                  value={formData.reason}
+                  onChange={handleInputChange}
+                  rows={4}
+                  className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 resize-none"
+                  required
                 />
               </div>
-            </div>
 
-            {/* Packages */}
-            <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Service Packages</h3>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {packages.map((pkg, index) => (
-                <div key={index} className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-blue-500 transition-colors">
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">{pkg.name}</h4>
-                  <div className="text-3xl font-bold text-blue-600 mb-6">{pkg.price}</div>
-                  <ul className="space-y-3">
-                    {pkg.services.map((service, serviceIndex) => (
-                      <li key={serviceIndex} className="flex items-center space-x-2">
-                        <Check className="h-4 w-4 text-green-600" />
-                        <span className="text-gray-700">{service}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href="/contact"
-                    className="block w-full mt-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-blue-800 transition-all duration-300"
-                  >
-                    Choose Package
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Before/After Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Before & After</h2>
-              <p className="text-gray-600 text-lg">See the incredible transformation our exterior detailing provides</p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-12">
-              <div className="text-center">
-                <img
-                  src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                  alt="Before exterior detailing"
-                  className="w-full h-64 object-cover rounded-lg shadow-lg mb-4"
-                />
-                <h3 className="text-xl font-bold text-gray-900">Before</h3>
-                <p className="text-gray-600">Dull and dirty exterior</p>
-              </div>
-              
-              <div className="text-center">
-                <img
-                  src="https://images.unsplash.com/photo-1619405399517-d7fce0f13302?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                  alt="After exterior detailing"
-                  className="w-full h-64 object-cover rounded-lg shadow-lg mb-4"
-                />
-                <h3 className="text-xl font-bold text-gray-900">After</h3>
-                <p className="text-gray-600">Brilliant shine and protection</p>
+              <div className="mt-8 text-center">
+                <button
+                  onClick={handleSubmit}
+                  className="bg-orange-500 hover:bg-orange-600 text-white py-3 px-8 rounded font-semibold transition-colors"
+                >
+                  Send Information
+                </button>
               </div>
             </div>
           </div>
-        </section>
-      </main>
+        </div>
+      </div>
       <Footer />
     </>
   );
