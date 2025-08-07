@@ -262,7 +262,7 @@ export default function AutoWindowTintingPage() {
     <>
       <Navbar />
 
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
+      <div className="min-h-screen bg-[#003B7A]">
         {/* Header */}
         <header className="py-8">
           <div className="max-w-7xl mx-auto px-4">
@@ -390,7 +390,7 @@ export default function AutoWindowTintingPage() {
           <div className="mt-12 max-w-4xl mx-auto">
             <div className="bg-gray-100 rounded-lg p-8">
               <h3 className="text-3xl font-bold text-gray-900 mb-2 text-center">
-                Get a Quote
+                Book Now
               </h3>
               <p className="text-gray-600 mb-8 text-center">
                 We are looking forward to hearing from you!

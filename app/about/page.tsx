@@ -7,7 +7,7 @@ export default function About() {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-[60vh] bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 flex items-center">
+        <section className="relative min-h-[60vh] bg-gradient-to-br from-[#003B7A] via-[#003B7A] to-[#003B7A] flex items-center">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-y-12"></div>
           </div>
@@ -35,7 +35,7 @@ export default function About() {
                   alt="Car detailing service"
                   className="w-full h-96 object-cover rounded-lg shadow-lg"
                 />
-                <div className="absolute bottom-4 left-4 bg-blue-900 text-white p-4 rounded-lg">
+                <div className="absolute bottom-4 left-4 bg-[#003B7A] text-white p-4 rounded-lg">
                   <div className="text-3xl font-bold">5+</div>
                   <div className="text-sm">Years Experience</div>
                 </div>
@@ -72,7 +72,7 @@ export default function About() {
         </section>
 
         {/* Stats Section */}
-        <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
+        <section className="py-20 bg-[#003B7A]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-3 gap-8 text-center text-white">
               <div>

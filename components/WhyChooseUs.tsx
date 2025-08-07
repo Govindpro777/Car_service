@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
+    <section className="py-20 bg-[#003B7A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}

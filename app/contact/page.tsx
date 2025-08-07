@@ -1,29 +1,33 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { useState } from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: ''
+    fullName: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -32,11 +36,11 @@ export default function Contact() {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-[60vh] bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 flex items-center">
+        <section className="relative min-h-[60vh] bg-gradient-to-br from-[#003B7A] via-blue-[#003B7A] to-[#003B7A] flex items-center">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-y-12"></div>
           </div>
-          
+
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center text-white">
               <div className="mb-4">
@@ -58,7 +62,9 @@ export default function Contact() {
                 <p className="text-orange-500 text-sm font-semibold tracking-wider uppercase mb-4">
                   CONTACT US
                 </p>
-                <h2 className="text-4xl font-bold text-gray-900 mb-8">Customer Support</h2>
+                <h2 className="text-4xl font-bold text-gray-900 mb-8">
+                  Customer Support
+                </h2>
 
                 <div className="space-y-8">
                   <div className="flex items-center space-x-4">
@@ -66,7 +72,9 @@ export default function Contact() {
                       <Phone className="h-6 w-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">Phone Number</h3>
+                      <h3 className="font-semibold text-gray-900">
+                        Phone Number
+                      </h3>
                       <p className="text-gray-600">+1 902 901 5502</p>
                     </div>
                   </div>
@@ -76,7 +84,9 @@ export default function Contact() {
                       <Mail className="h-6 w-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">Email Address</h3>
+                      <h3 className="font-semibold text-gray-900">
+                        Email Address
+                      </h3>
                       <p className="text-gray-600">admin@elitedetailing.ca</p>
                     </div>
                   </div>
@@ -96,7 +106,9 @@ export default function Contact() {
                       <Clock className="h-6 w-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">Working Hours</h3>
+                      <h3 className="font-semibold text-gray-900">
+                        Working Hours
+                      </h3>
                       <p className="text-gray-600">Sun-Sat: 9am-7pm</p>
                     </div>
                   </div>
@@ -108,11 +120,16 @@ export default function Contact() {
                 <p className="text-orange-500 text-sm font-semibold tracking-wider uppercase mb-4">
                   CONTACT US
                 </p>
-                <h2 className="text-4xl font-bold text-gray-900 mb-8">Get In Touch</h2>
+                <h2 className="text-4xl font-bold text-gray-900 mb-8">
+                  Get In Touch
+                </h2>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="fullName"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Full Name *
                     </label>
                     <input
@@ -128,7 +145,10 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Email *
                     </label>
                     <input
@@ -144,7 +164,10 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Phone *
                     </label>
                     <input
@@ -160,7 +183,10 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="service"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Select The Service *
                     </label>
                     <select
@@ -180,7 +206,10 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Reason For Contact *
                     </label>
                     <textarea

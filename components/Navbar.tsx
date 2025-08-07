@@ -25,7 +25,7 @@ const Navbar = () => {
               <Car className="h-8 w-8 text-white" />
             </div> */}
             <span className="text-xl font-bold text-gray-900">
-              Haitch Barber shop
+              Car Services
             </span>
           </Link>
 
@@ -81,7 +81,7 @@ const Navbar = () => {
               href="/contact"
               className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300"
             >
-              Get A Quote
+              Book Now
             </Link>
           </div>
 
