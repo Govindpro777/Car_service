@@ -1,59 +1,63 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 const Gallery = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   const categories = [
-    { id: 'all', name: 'All Work' },
-    { id: 'interior', name: 'Interior' },
-    { id: 'exterior', name: 'Exterior' },
-    { id: 'tinting', name: 'Window Tinting' }
+    { id: "all", name: "All Work" },
+    { id: "interior", name: "Interior" },
+    { id: "exterior", name: "Exterior" },
+    { id: "tinting", name: "Window Tinting" },
   ];
 
   const galleryItems = [
     {
       id: 1,
-      category: 'exterior',
-      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      title: "Exterior Detail - BMW"
+      category: "exterior",
+      image: "/exterior1.webp",
+      title: "Exterior Detail - BMW",
     },
     {
       id: 2,
-      category: 'interior',
-      image: "https://images.unsplash.com/photo-1607603750916-d9d2cc01c7d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      title: "Interior Detail - Luxury Car"
+      category: "interior",
+      image: "/interior1.jpg",
+      title: "Interior Detail - Luxury Car",
     },
     {
       id: 3,
-      category: 'tinting',
-      image: "https://images.unsplash.com/photo-1625542927806-5ca2e4cddb0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      title: "Window Tinting Service"
+      category: "tinting",
+      image: "/window.jpg",
+      title: "Window Tinting Service",
     },
     {
       id: 4,
-      category: 'exterior',
-      image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      title: "Professional Wash & Wax"
+      category: "exterior",
+      image:
+        "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      title: "Professional Wash & Wax",
     },
     {
       id: 5,
-      category: 'interior',
-      image: "https://images.unsplash.com/photo-1619405399517-d7fce0f13302?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      title: "Leather Seat Treatment"
+      category: "interior",
+      image:
+        "https://images.unsplash.com/photo-1619405399517-d7fce0f13302?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      title: "Leather Seat Treatment",
     },
     {
       id: 6,
-      category: 'exterior',
-      image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      title: "Paint Correction"
-    }
+      category: "exterior",
+      image:
+        "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      title: "Paint Correction",
+    },
   ];
 
-  const filteredItems = selectedCategory === 'all' 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === selectedCategory);
+  const filteredItems =
+    selectedCategory === "all"
+      ? galleryItems
+      : galleryItems.filter((item) => item.category === selectedCategory);
 
   return (
     <section className="py-20 bg-white">
@@ -64,7 +68,8 @@ const Gallery = () => {
           </p>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Gallery</h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Take a look at some of our recent work and see the transformation we bring to every vehicle.
+            Take a look at some of our recent work and see the transformation we
+            bring to every vehicle.
           </p>
         </div>
 
@@ -76,8 +81,8 @@ const Gallery = () => {
               onClick={() => setSelectedCategory(category.id)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? "bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
               {category.name}
