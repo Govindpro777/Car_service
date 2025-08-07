@@ -1,27 +1,31 @@
 const WhyChooseUs = () => {
   const features = [
     {
-      image: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      title: "Professional Equipment"
+      image:
+        "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      title: "Professional Equipment",
     },
     {
-      image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      title: "Expert Technicians"
+      image:
+        "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      title: "Expert Technicians",
     },
     {
-      image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      title: "Premium Products"
+      image:
+        "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      title: "Premium Products",
     },
     {
-      image: "https://images.unsplash.com/photo-1609728465094-c1b13cc2f007?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      title: "Attention to Detail"
-    }
+      image:
+        "https://images.unsplash.com/photo-1619405399517-d7fce0f13302?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      title: "Attention to Detail",
+    },
   ];
 
   const stats = [
     { number: "500+", label: "Cars Detailed" },
     { number: "3", label: "Certified Detailing & Tinting Professionals" },
-    { number: "100%", label: "Customer Satisfaction Rate" }
+    { number: "100%", label: "Customer Satisfaction Rate" },
   ];
 
   return (
@@ -32,13 +36,16 @@ const WhyChooseUs = () => {
           <div className="text-white">
             <h2 className="text-4xl font-bold mb-6">Why Choose Us</h2>
             <p className="text-blue-100 text-lg mb-8 leading-relaxed">
-              A&B Detailing, featuring car detailing. Our skilled team delivers exceptional results, 
-              restoring glory and integrity to every vehicle. Experience with our meticulous exterior and interior detailing.
+              A&B Detailing, featuring car detailing. Our skilled team delivers
+              exceptional results, restoring glory and integrity to every
+              vehicle. Experience with our meticulous exterior and interior
+              detailing.
             </p>
             <p className="text-blue-100 text-lg leading-relaxed">
-              Choose A&B Detailing for unmatched service and customer satisfaction. We listen to 
-              your needs, sharing transparent pricing and a seamless experience. Trust our passion for 
-              cars to reflect your style and personality. Experience the difference today.
+              Choose A&B Detailing for unmatched service and customer
+              satisfaction. We listen to your needs, sharing transparent pricing
+              and a seamless experience. Trust our passion for cars to reflect
+              your style and personality. Experience the difference today.
             </p>
           </div>
 
@@ -54,7 +61,9 @@ const WhyChooseUs = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-white font-semibold text-lg">{feature.title}</h3>
+                    <h3 className="text-white font-semibold text-lg">
+                      {feature.title}
+                    </h3>
                   </div>
                 </div>
               </div>
@@ -66,7 +75,9 @@ const WhyChooseUs = () => {
         <div className="mt-20 grid md:grid-cols-3 gap-8 text-center">
           {stats.map((stat, index) => (
             <div key={index} className="text-white">
-              <div className="text-5xl font-bold text-orange-400 mb-2">{stat.number}</div>
+              <div className="text-5xl font-bold text-orange-400 mb-2">
+                {stat.number}
+              </div>
               <div className="text-blue-100 text-lg">{stat.label}</div>
             </div>
           ))}
