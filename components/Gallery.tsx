@@ -120,8 +120,10 @@
 import { useState } from "react";
 
 const Gallery = () => {
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [selectedImage, setSelectedImage] = useState<
+    (typeof galleryItems)[0] | null
+  >(null);
 
   const categories = [
     { id: "all", name: "All Work", icon: "🎨" },

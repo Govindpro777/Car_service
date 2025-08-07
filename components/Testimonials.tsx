@@ -61,9 +61,15 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 
+declare global {
+  interface Window {
+    Swiper: any;
+  }
+}
+
 const Testimonials = () => {
-  const swiperRef = useRef(null);
-  const swiperInstanceRef = useRef(null);
+  const swiperRef = useRef<any>(null);
+  const swiperInstanceRef = useRef<any>(null);
 
   const testimonials = [
     {
@@ -181,7 +187,7 @@ const Testimonials = () => {
     };
   }, []);
 
-  const StarRating = ({ rating }) => {
+  const StarRating = ({ rating }: { rating: number }) => {
     return (
       <div className="flex space-x-1">
         {[...Array(5)].map((_, i) => (
