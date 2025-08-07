@@ -3,18 +3,18 @@ const Testimonials = () => {
     {
       name: "Rob Edmonson",
       rating: 5,
-      text: "I brought my car to A&B Detailing and it came out looking better than it did the day I bought it."
+      text: "I brought my car to A&B Detailing and it came out looking better than it did the day I bought it.",
     },
     {
       name: "Jennifer White-Grandy",
       rating: 5,
-      text: "Absolutely LOVED Elite for Tinting Services! For my Honda Civic Sedan they were very thorough and the job was excellent!"
+      text: "Absolutely LOVE Haitch Barber shop for Tinting Services! For my Honda Civic Sedan they were very thorough and the job was excellent!",
     },
     {
-      name: "Harry Sanders", 
+      name: "Harry Sanders",
       rating: 5,
-      text: "Thanks to their car detailing and tinting services from A&B Detailing and I can honestly say I am a customer of the quality work they have in superior tinting."
-    }
+      text: "Thanks to their car detailing and tinting services from A&B Detailing and I can honestly say I am a customer of the quality work they have in superior tinting.",
+    },
   ];
 
   return (
@@ -37,7 +37,9 @@ const Testimonials = () => {
                   </span>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
+                  <h4 className="font-semibold text-gray-900">
+                    {testimonial.name}
+                  </h4>
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <span key={i}>★</span>

@@ -25,7 +25,7 @@ const Navbar = () => {
               <Car className="h-8 w-8 text-white" />
             </div> */}
             <span className="text-xl font-bold text-gray-900">
-              Elite Auto Detailing
+              Haitch Barber shop
             </span>
           </Link>
 

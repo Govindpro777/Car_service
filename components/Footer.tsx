@@ -12,7 +12,7 @@ const Footer = () => {
               {/* <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-2 rounded-lg">
                 <Car className="h-8 w-8 text-white" />
               </div> */}
-              <span className="text-xl font-bold">Elite Auto Detailing</span>
+              <span className="text-xl font-bold">Haitch Barber shop</span>
             </Link>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Professional car detailing services that restore your vehicle to
@@ -130,7 +130,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
           <p>
-            © 2025 Elite Auto Detailing | All Rights Reserved. Made by{" "}
+            © 2025 Haitch Barber shop | All Rights Reserved. Made by{" "}
             <span className="text-orange-400">WebCraft Studios</span>
           </p>
         </div>
