@@ -109,16 +109,145 @@
 
 // export default Hero;
 
+// "use client";
+
+// import { useState } from "react";
+// import { Phone, MapPin, Clock } from "lucide-react";
+// import before1 from "@/public/before1.jpg";
+// import after1 from "@/public/after1.jpg";
+// import Image from "next/image";
+
+// const Hero = () => {
+//   const [isAfter, setIsAfter] = useState(false);
+
+//   return (
+//     <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 overflow-hidden">
+//       {/* Background Pattern */}
+//       <div className="absolute inset-0 opacity-10">
+//         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-y-12"></div>
+//       </div>
+
+//       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+//         <div className="grid lg:grid-cols-2 gap-12 items-center">
+//           {/* Left Content */}
+//           <div className="text-white space-y-8">
+//             <div>
+//               <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+//                 Revive,
+//                 <br />
+//                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
+//                   Restore,
+//                 </span>
+//                 <br />
+//                 Renew.
+//               </h1>
+//               <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+//                 Premium detailing services that bring out the best in your
+//                 vehicle. Experience unmatched automotive elegance with our
+//                 expert care.
+//               </p>
+//             </div>
+
+//             <div className="flex flex-col sm:flex-row gap-4">
+//               <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+//                 Learn More
+//               </button>
+//               <button className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+//                 Get Gift Card
+//               </button>
+//             </div>
+
+//             {/* Contact Info */}
+//             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+//               <div className="flex items-center space-x-3">
+//                 <div className="bg-orange-500 p-2 rounded-lg">
+//                   <Phone className="h-5 w-5 text-white" />
+//                 </div>
+//                 <div>
+//                   <p className="text-orange-400 text-sm">PHONE</p>
+//                   <p className="font-semibold">+1 902 901 5502</p>
+//                 </div>
+//               </div>
+
+//               <div className="flex items-center space-x-3">
+//                 <div className="bg-orange-500 p-2 rounded-lg">
+//                   <MapPin className="h-5 w-5 text-white" />
+//                 </div>
+//                 <div>
+//                   <p className="text-orange-400 text-sm">LOCATION</p>
+//                   <p className="font-semibold">Nova Scotia, Canada</p>
+//                 </div>
+//               </div>
+
+//               <div className="flex items-center space-x-3">
+//                 <div className="bg-orange-500 p-2 rounded-lg">
+//                   <Clock className="h-5 w-5 text-white" />
+//                 </div>
+//                 <div>
+//                   <p className="text-orange-400 text-sm">OPEN HOURS</p>
+//                   <p className="font-semibold">Mon-Sun: 10am-6pm</p>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+
+//           {/* Right Content - Before/After Card */}
+//           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+//             {/* Image section */}
+//             <div className="relative w-full h-80">
+//               <Image
+//                 src={isAfter ? after1 : before1}
+//                 alt={isAfter ? "After detailing" : "Before detailing"}
+//                 fill
+//                 className="object-cover"
+//                 priority
+//               />
+//             </div>
+
+//             {/* Toggle button */}
+//             <div className="flex justify-center mt-4">
+//               <button
+//                 onClick={() => setIsAfter(!isAfter)}
+//                 className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:bg-blue-700 transition-all duration-300"
+//               >
+//                 {isAfter ? "Show Before" : "Show After"}
+//               </button>
+//             </div>
+
+//             {/* Text content */}
+//             <div className="p-6 text-center">
+//               <h3 className="text-xl font-bold text-gray-900 mb-2">
+//                 {isAfter ? "After Professional Detailing" : "Before Detailing"}
+//               </h3>
+//               <p className="text-gray-600">
+//                 {isAfter
+//                   ? "Restored to pristine condition with our expert care"
+//                   : "See the transformation with our detailing services"}
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Bottom Wave */}
+//     </section>
+//   );
+// };
+
+// export default Hero;
+
 "use client";
 
 import { useState } from "react";
 import { Phone, MapPin, Clock } from "lucide-react";
-import before1 from "@/public/before1.jpg";
-import after1 from "@/public/after1.jpg";
-import Image from "next/image";
 
 const Hero = () => {
-  const [isAfter, setIsAfter] = useState(false);
+  const [showAfter, setShowAfter] = useState(false);
+
+  // Using placeholder images - replace these URLs with your actual image paths
+  const beforeImage = "/unwashed1.jpg";
+  const afterImage =
+    "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80";
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 overflow-hidden">
@@ -194,33 +323,44 @@ const Hero = () => {
           {/* Right Content - Before/After Card */}
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
             {/* Image section */}
-            <div className="relative w-full h-80">
-              <Image
-                src={isAfter ? after1 : before1}
-                alt={isAfter ? "After detailing" : "Before detailing"}
-                fill
-                className="object-cover"
-                priority
+            <div className="relative w-full h-80 overflow-hidden">
+              <img
+                src={showAfter ? afterImage : beforeImage}
+                alt={
+                  showAfter
+                    ? "After detailing - clean, polished car"
+                    : "Before detailing - dirty, unpolished car"
+                }
+                className="w-full h-full object-cover transition-all duration-500 ease-in-out"
               />
+
+              {/* Optional: Add a subtle overlay effect during transition */}
+              <div
+                className={`absolute inset-0 bg-black transition-opacity duration-300 ${
+                  showAfter ? "opacity-0" : "opacity-0"
+                }`}
+              ></div>
             </div>
 
             {/* Toggle button */}
             <div className="flex justify-center mt-4">
               <button
-                onClick={() => setIsAfter(!isAfter)}
-                className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:bg-blue-700 transition-all duration-300"
+                onClick={() => setShowAfter(!showAfter)}
+                className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
               >
-                {isAfter ? "Show Before" : "Show After"}
+                {showAfter ? "Show Before" : "Show After"}
               </button>
             </div>
 
             {/* Text content */}
             <div className="p-6 text-center">
               <h3 className="text-xl font-bold text-gray-900 mb-2">
-                {isAfter ? "After Professional Detailing" : "Before Detailing"}
+                {showAfter
+                  ? "After Professional Detailing"
+                  : "Before Detailing"}
               </h3>
               <p className="text-gray-600">
-                {isAfter
+                {showAfter
                   ? "Restored to pristine condition with our expert care"
                   : "See the transformation with our detailing services"}
               </p>
@@ -228,8 +368,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* Bottom Wave */}
     </section>
   );
 };
